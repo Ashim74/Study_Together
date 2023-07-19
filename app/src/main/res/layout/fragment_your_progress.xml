@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/MainActivityBackgroundColor"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="5dp"
+    tools:context=".fragments.yourProgress.YourProgressFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvCurrentDay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            >
+            <TextView
+                android:id="@+id/tv_day_progressed"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_gravity="center"
+                android:text="Day\n1"
+                android:textColor="@color/RadioButtonColor"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textSize="25sp"
+                android:background="@drawable/drawable_circular_border"/>
+        </FrameLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvTimeSpent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="10dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cvCurrentDay"
+
+        >
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:padding="10dp"
+
+           >
+           <LinearLayout
+               android:id="@+id/ll_history"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               android:padding="5dp"
+               app:layout_constraintTop_toBottomOf="@id/tv_spent_time"
+               app:layout_constraintStart_toStartOf="parent"
+               >
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="History"
+                   android:textSize="18sp"
+                   android:paddingEnd="15dp"
+
+                   android:textColor="@color/textColor"/>
+               <ImageView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:src="@drawable/ic_history_24"/>
+
+           </LinearLayout>
+
+           <TextView
+               android:id="@+id/tvTimeTextView"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="15dp"
+               android:paddingEnd="15dp"
+               android:text="Today's Study time:"
+               android:textColor="@color/textColor"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               />
+
+           <TextView
+               android:id="@+id/tv_spent_time"
+               android:layout_width="0dp"
+               android:layout_height="50dp"
+               android:layout_gravity="center"
+               android:paddingStart="10dp"
+               android:paddingEnd="10dp"
+               android:text="00:00:00"
+               android:textColor="@color/RadioButtonColor"
+               android:gravity="center"
+               android:textSize="25sp"
+               app:layout_constraintStart_toEndOf="@id/tvTimeTextView"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               android:background="@drawable/drawable_rectangular_border"
+
+               />
+
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnStartStudying"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start studying"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/RadioButtonColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

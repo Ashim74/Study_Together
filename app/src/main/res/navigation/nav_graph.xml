@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/yourProgress">
+
+    <fragment
+        android:id="@+id/yourProgress"
+        android:name="com.droidnova.studytogether.fragments.yourProgress.YourProgressFragment"
+        android:label="fragment_your_progress"
+        tools:layout="@layout/fragment_your_progress" >
+
+        <action
+            android:id="@+id/action_yourProgress_to_spentTimeHistory"
+            app:destination="@id/spentTimeHistory" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/studyPlanner"
+        android:name="com.droidnova.studytogether.fragments.studyPlanner.StudyPlannerFragment"
+        android:label="fragment_study_planner"
+        tools:layout="@layout/fragment_study_planner" >
+
+    </fragment>
+    <fragment
+        android:id="@+id/studyMaterial"
+        android:name="com.droidnova.studytogether.fragments.studyMaterial.StudyMaterialFragment"
+        android:label="fragment_study_material"
+        tools:layout="@layout/fragment_study_material" />
+    <fragment
+        android:id="@+id/spentTimeHistory"
+        android:name="com.droidnova.studytogether.fragments.spentTimeHistory.SpentTimeHistoryFragment"
+        android:label="fragment_spent_time_history"
+        tools:layout="@layout/fragment_spent_time_history" />
+
+
+</navigation>

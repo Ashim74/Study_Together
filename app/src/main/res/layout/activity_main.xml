@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/MainActivityBackgroundColor"
+    tools:context=".MainActivity">
+
+  <androidx.fragment.app.FragmentContainerView
+      android:id="@+id/nav_host_fragment"
+      android:name="androidx.navigation.fragment.NavHostFragment"
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      app:defaultNavHost="true"
+      app:navGraph="@navigation/nav_graph"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintBottom_toTopOf="@id/rgMainOptions" />
+
+
+  <RadioGroup
+      android:id="@+id/rgMainOptions"
+      android:layout_width="match_parent"
+      android:layout_height="40dp"
+      android:background="@drawable/drawable_radio_group_tab_background"
+      android:orientation="horizontal"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent">
+    <RadioButton
+        android:id="@+id/rbYourProgress"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.50"
+        android:background="@drawable/drawable_main_options_selector"
+        android:button="@null"
+        android:checked="true"
+        android:gravity="center"
+        android:text="Your Progress"
+        android:textColor="@drawable/drawable_main_options_text_color_selector"
+        android:textSize="13sp"
+        android:textStyle="bold"/>
+    <RadioButton
+        android:id="@+id/rbStudyPlanner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.50"
+        android:background="@drawable/drawable_main_options_selector"
+        android:button="@null"
+        android:checked="false"
+        android:gravity="center"
+        android:text="Study Planner"
+        android:textColor="@drawable/drawable_main_options_text_color_selector"
+        android:textSize="13sp"
+        android:textStyle="bold"/>
+    <RadioButton
+        android:id="@+id/rbStudyMaterial"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.50"
+        android:background="@drawable/drawable_main_options_selector"
+        android:button="@null"
+        android:checked="false"
+        android:gravity="center"
+        android:text="Study Material"
+        android:textColor="@drawable/drawable_main_options_text_color_selector"
+        android:textSize="13sp"
+        android:textStyle="bold"/>
+  </RadioGroup>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
